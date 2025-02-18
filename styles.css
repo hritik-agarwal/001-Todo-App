@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightgray;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    height: 100vh;
+    margin: auto;
+    padding: 15px;
+}
+
+.todo-app-container {
+    width: 80%;
+    max-width: 700px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.heading {
+    text-align: center;
+    padding: 15px;
+    background-color: darkslategray;
+    color: white;
+    border: 3px solid greenyellow;
+    border-radius: 20px;
+}
+
+.todos-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.text-box {
+    flex-grow: 1;
+    padding: 10px;
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+}
+
+.input-box-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.todos-list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid darkgray;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding: 10px 10px 20px 80px;
+}
+
+.todo-item {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.todo-item .drag-btn {
+    position: absolute;
+    left: -70px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 7px;
+}
+
+.todo-item .todo-value {
+    flex-grow: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.todo-item button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.todo-item .checkbox {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    left: -40px;
+}
