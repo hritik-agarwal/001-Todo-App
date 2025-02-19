@@ -4,7 +4,7 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 
 **Todo App Objectives**
 
-- [ ] Add ability to create, view, update, delete and check todos (est. 1hr)
+- [X] Add ability to create, view, update, delete and check todos (est. 1hr)
 - [ ] Add a search bar to filter through the todos (est. 30mins)
 - [ ] Add a toggle to move completed tasks to buttom on check (est. 30mins)
 - [ ] Use local storage to store all todos, on refresh should persist (est. 30mins)

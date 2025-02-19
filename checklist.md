@@ -25,6 +25,6 @@
 
 ---
 
-**Day 1: 17th Feb** : Done with project setup
-
-**Day 2 : 18th Feb** : Created a wireframe and UI for the todo app
+**Day 1 : 17th Feb** : Done with project setup
+**Day 2 : 18th Feb** : Created a wireframe and initial UI for the todo app
+**Day 3 : 19th Feb** :

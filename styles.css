@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+/* Scrollbar CSS */
+::-webkit-scrollbar { width: 3px; }
+
+/* ::-webkit-scrollbar-track {
+    background-color: darkgray;
+} */
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: gray;
+}
+
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: lightgray;
@@ -13,7 +29,7 @@ button {
     cursor: pointer;
 }
 
-.container {
+#container {
     width: 80%;
     max-width: 900px;
     height: 100vh;
@@ -21,7 +37,7 @@ button {
     padding: 15px;
 }
 
-.todo-app-container {
+#todo-app-container {
     width: 80%;
     max-width: 700px;
     height: 100%;
@@ -31,7 +47,7 @@ button {
     gap: 30px;
 }
 
-.heading {
+#heading {
     text-align: center;
     padding: 15px;
     background-color: darkslategray;
@@ -40,7 +56,7 @@ button {
     border-radius: 20px;
 }
 
-.todos-container {
+#todos-container {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -67,7 +83,7 @@ button {
     border: none;
 }
 
-.todos-list {
+#todos-list {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -82,9 +98,11 @@ button {
     display: flex;
     gap: 5px;
     position: relative;
+    height: 30px;
+    align-items: center;
 }
 
-.todo-item .drag-btn {
+.todo-item .todo-drag-btn {
     position: absolute;
     left: -70px;
     font-weight: bold;
@@ -101,15 +119,21 @@ button {
     outline: none;
 }
 
+.todo-item .todo-value.checked {
+    text-decoration: line-through;
+    color: darkgray;
+}
+
 .todo-item button {
-    padding: 10px;
+    width: 40px;
+    padding: 5px;
     border-radius: 10px;
     border: none;
 }
 
-.todo-item .checkbox {
-    width: 30px;
+.todo-item .todo-checkbox {
+    width: 20px;
     height: 100%;
     position: absolute;
-    left: -40px;
+    left: -35px;
 }
