@@ -102,6 +102,10 @@ button {
     align-items: center;
 }
 
+.todo-item.hide {
+    display: none;
+}
+
 .todo-item .todo-drag-btn {
     position: absolute;
     left: -70px;
@@ -136,4 +140,8 @@ button {
     height: 100%;
     position: absolute;
     left: -35px;
+}
+
+#hide-done-todos-btn.activate {
+    background-color: skyblue;
 }
