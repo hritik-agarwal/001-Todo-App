@@ -1,6 +1,8 @@
+This is **phase-1/sub-phase-1A/project-001** from my ongoing self-challenge called [Purpose Driven Learning](https://github.com/hritik-agarwal/purpose-driven-learning/blob/main/README.md)
+
 # 001-todo-app
 
-Basic todo app with vanilla js to learn crud operations, filtering, local storage, drag-drop sorting
+Basic todo app with vanilla js to learn crud operations, filtering, local storage, drag-drop sorting.
 
 **Todo App Objectives**
 
