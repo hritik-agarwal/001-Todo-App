@@ -17,10 +17,11 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 
 **Daily Progress**
 
-**Day 1 : 17th Feb** : Done with project setup
-**Day 2 : 18th Feb** : Created a wireframe and initial UI for the todo app
-**Day 3 : 19th Feb** : Added CRUD functionality in JS
-**Day 4 : 20th Feb** : Added localStorage, search feature and hide done todos functionality
+* [X] **Day 1 : 17th Feb** : Done with project setup
+* [X] **Day 2 : 18th Feb** : Created a wireframe and initial UI for the todo app
+* [X] **Day 3 : 19th Feb** : Added CRUD functionality in JS
+* [X] **Day 4 : 20th Feb** : Added localStorage, search feature and hide done todos functionality
+* [ ] **Day 5 : 21st Feb** : Agenda :- build drag-drop-feature (check draggable, sortable.js, dragula and interact.js)
 
 **Things I Learned**
 
