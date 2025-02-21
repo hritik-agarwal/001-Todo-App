@@ -1,14 +1,14 @@
-// Elements
+// ELEMENTS
 const todosList = document.querySelector("#todos-list");
 const createTodoInput = document.querySelector("#create-todo-input");
 const createTodoButton = document.querySelector("#create-todo-btn");
 const searchTodosInput = document.querySelector("#search-todos-input")
 const hideDoneTodosButton = document.querySelector("#hide-done-todos-btn")
 
-// Global Variables
+// VARIABLES
 let allTodos = getDataFromLocalStorage()
 
-// Event Listenors
+// EVENT_LISTENERS
 createTodoButton.addEventListener("click", handleCreateTodo);
 createTodoInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") handleCreateTodo();
@@ -16,34 +16,31 @@ createTodoInput.addEventListener("keyup", (e) => {
 searchTodosInput.addEventListener("input", handleTodosSearch)
 hideDoneTodosButton.addEventListener("click", toggleHideDoneTodos)
 
-// Utility Functions
-
-function addTodoinTodoList(todoId, todoValue, todoChecked){
-    const todoHTML = getHTMLNode(todoId, todoValue, todoChecked);
-    todosList.appendChild(todoHTML)
-    getTodo(todoId, ".todo-checkbox").addEventListener(
-        "change",
-        handleTodoCheckbox
-    );
-    getTodo(todoId, ".todo-delete").addEventListener("click", handleTodoDelete);
-    getTodo(todoId, ".todo-edit").addEventListener("click", handleTodoEdit);
-}
+// HANDLE_LOCAL_STORAGE
 
 function getDataFromLocalStorage() {
-    const todoList = localStorage.getItem('todoList')
-    const data = todoList ? JSON.parse(todoList) : []
-    for(let todo of data){
-        addTodoinTodoList(...Object.values(todo))
-    }
-    return data
+  const todoList = localStorage.getItem('todoList')
+  const data = todoList ? JSON.parse(todoList) : []
+  for(let todo of data){
+      addTodoinTodoList(...Object.values(todo))
+  }
+  return data
 }
 
 function updateDatainLocalStorage(){
-    const data = JSON.stringify(allTodos)
-    localStorage.setItem('todoList', data)
+  const data = JSON.stringify(allTodos)
+  localStorage.setItem('todoList', data)
 }
 
-function getHTMLNode(todoId, todoValue, todoChecked) {
+// GET_TODO_ITEM_ELEMENTS
+
+function getTodo(todoId, classVal = "") {
+  return document.querySelector(`#${todoId} ${classVal}`);
+}
+
+// CREATE_TODO_ITEM
+
+function getTodoNode(todoId, todoValue, todoChecked) {
   const template = document.createElement("div");
   template.innerHTML = `<div class="todo-item" id="${todoId}">
             <button class="todo-drag-btn">::</button>
@@ -55,15 +52,32 @@ function getHTMLNode(todoId, todoValue, todoChecked) {
   return template.firstElementChild;
 }
 
-function getTodo(todoId, classVal) {
-  return document.querySelector(`#${todoId} ${classVal}`);
+function addTodoinTodoList(todoId, todoValue, todoChecked){
+  const todoHTML = getTodoNode(todoId, todoValue, todoChecked);
+  todosList.appendChild(todoHTML)
+  getTodo(todoId).addEventListener("click", (e) => {
+    if(e.target.classList.contains("todo-delete")) handleTodoDelete(e)
+    if(e.target.classList.contains("todo-edit")) handleTodoEdit(e)
+  })
+  getTodo(todoId, ".todo-drag-btn").addEventListener("mouseenter", handleDragButton)
+  getTodo(todoId, ".todo-drag-btn").addEventListener("mouseleave", handleDragButton)
+  getTodo(todoId, ".todo-checkbox").addEventListener("change",handleTodoCheckbox);
+  addDragListeners(todoId)
 }
 
-// Todo CRUD Functions
+function handleCreateTodo(e) {
+  const todoValue = createTodoInput.value;
+  const todoId = "todo-" + crypto.randomUUID();
+  addTodoinTodoList(todoId, todoValue, false)
+  createTodoInput.value = "";
+  allTodos.push({ todoId, todoValue, todoChecked: false });
+  updateDatainLocalStorage();
+}
+
+// HANDLE_TODO_CHECK
 
 function handleTodoCheckbox(e) {
   const todoId = e.target.parentNode.id;
-  console.log({ todoId });
   allTodos = allTodos.map((todo) => {
     if (todo.todoId === todoId) {
       return { ...todo, todoChecked: e.target.checked };
@@ -76,12 +90,16 @@ function handleTodoCheckbox(e) {
   refreshHideDoneTodos()
 }
 
+// DELETE_TODO_ITEM
+
 function handleTodoDelete(e) {
   const todoId = e.target.parentNode.id;
   allTodos = allTodos.filter((todo) => todo.todoId != todoId);
   getTodo(todoId, "").remove();
   updateDatainLocalStorage();
 }
+
+// EDIT_TODO_ITEM
 
 function handleTodoEdit(e) {
   const todoId = e.target.parentNode.id;
@@ -106,14 +124,7 @@ function handleTodoEdit(e) {
   }
 }
 
-function handleCreateTodo(e) {
-  const todoValue = createTodoInput.value;
-  const todoId = "todo-" + crypto.randomUUID();
-  addTodoinTodoList(todoId, todoValue, false)
-  createTodoInput.value = "";
-  allTodos.push({ todoId, todoValue, todoChecked: false });
-  updateDatainLocalStorage();
-}
+// SEARCH_TODOS
 
 function handleTodosSearch(){
     const searchValue = searchTodosInput.value;
@@ -127,6 +138,8 @@ function handleTodosSearch(){
         }
     })
 }
+
+// HIDE_DONE_TODOS
 
 function refreshHideDoneTodos(){
     const hideDone = hideDoneTodosButton.classList.contains("activate")
@@ -143,4 +156,72 @@ function refreshHideDoneTodos(){
 function toggleHideDoneTodos(){
     hideDoneTodosButton.classList.toggle("activate")
     refreshHideDoneTodos()
+}
+
+// OP_HANDLE_TODO_REORDER
+
+function handleDragButton(e) {
+  const todoId = e.target.parentNode.id;
+  const todoItem = getTodo(todoId)
+  if(todoItem.hasAttribute("draggable")){
+    todoItem.removeAttribute("draggable")
+  } else{
+    todoItem.setAttribute("draggable", "true")
+  }
+}
+
+function addDragListeners(todoId){
+  const todoItem = getTodo(todoId)
+  todoItem.addEventListener("dragstart", handleDragStart)
+  todoItem.addEventListener("dragenter", handleDragEnter)
+  todoItem.addEventListener("dragover", handleDragOver)
+  todoItem.addEventListener("drop", handleDrop)
+}
+
+// fired when user starts dragging an element
+function handleDragStart(e){
+  e.dataTransfer.setData("text/plain", e.target.id)
+}
+
+// fired when dragged element enters a valid drop target
+function handleDragEnter(e){
+  e.preventDefault()
+}
+
+// fired when dragged element is over a valid drop target
+function handleDragOver(e){
+  e.preventDefault()
+  e.dataTransfer.dropEffect = "move"
+}
+
+// fired when dragged element is dropped over valid drop target
+function handleDrop(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  const dropTarget = e.target.closest('.todo-item');
+  if(!dropTarget) return false;
+
+  const draggedId = e.dataTransfer.getData("text/plain");
+  const droppedId = dropTarget.id;
+
+  if(!draggedId || !droppedId || draggedId == droppedId) return false;
+
+  const draggedIndex = allTodos.findIndex(todo => todo.todoId === draggedId);
+  const droppedIndex = allTodos.findIndex(todo => todo.todoId === droppedId);
+
+  if (draggedIndex === -1 || droppedIndex === -1) return false;
+  
+  const [draggedItem] = allTodos.splice(draggedIndex, 1)
+  allTodos.splice(droppedIndex, 0, draggedItem)
+  updateDatainLocalStorage()
+
+  const todoItems = Array.from(todosList.querySelectorAll('.todo-item'));
+  const draggedItemNode = todoItems.find(item => item.id === draggedId);
+
+  if (draggedIndex < droppedIndex) {
+    dropTarget.parentNode.insertBefore(draggedItemNode, dropTarget.nextSibling);
+  } else {
+    dropTarget.parentNode.insertBefore(draggedItemNode, dropTarget);
+  }
 }
