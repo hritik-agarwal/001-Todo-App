@@ -12,10 +12,9 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 - [X] Add a toggle to hide completed tasks (est. 30mins)
 - [X] Add a drag-drop logic to allow changing todos position (est. 1hr)
 
-**Tools and Resources**
+**Tools and Resources Used**
 
-- HTML, CSS, JS for app
-- Library to allow drag-drop (bonus if built custom)
+- HTML5, CSS, JS
 
 **Daily Progress**
 
@@ -29,28 +28,32 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 
 - *Lessons in HTML*
   - Use correct classes and ids from the start
-  - checked attribute doesn't work with true/false (you should add/remove attr itself)
-- *HTML Node*
-  - Fetching nodes : Prefer querySelector over other methods
+  - 'checked' attribute in checkbox doesn't work with true/false (attr itself needs to be added/removed)
+- *DOM Manipulation*
+  - Fetching nodes : using querySelector everywhere is faster juggling between other methods
   - HTML String to Node : Assign it to a temporary div innerHTML and return it's firstElementChild
   - Delete Node : node.remove()
   - Toggle Class : node.classList.toggle('class-name')
   - Update Attribute : node.setAttribute('attr-name', 'attr-value')
   - Add Child : node.appendChild(node)
-  - Nearest Element : use .closest to fine nearest up-node with particular selector
+  - Nearest Element : use node.closest('#id') to find nearest matching node in node to root path
   - Rearragne childs : use insertBefore to move them around
-- *Random UUID* : use browser crypto.randomUUID()
+- *Random UUID* : use browser crypto.randomUUID() to generate random uuids
 - *Event Listeners*
-  - mouse : click, dblclick, mouseover, mouseout, mousedown, mouseup
-  - keyboard : keydown, keyup, keypress
-  - form/input : submit, change, focus, blur
-  - window : load, DOMContentLoaded, resize, scroll
+  - mouse : click, mouseenter, mouseleave
+  - input : change
+  - drag : dragstart, dragover, dragenter, drop
 - *Function Call*
-  - pass object values : function-name(...Object.values(obj))
+  - to spread and pass object values : function-name(...Object.values(obj))
 - *Local Storage*
   - localStorage.setItem('key-name', JSON.stringify(data))
   - JSON.parse(localStorage.getItem('key-name'))
 - *Draggable*
   - add 'draggable' attribute to make any element draggable
-  - important events - dragstart, dragenter, dragover & drop
-  - to enable a drop zone, it's dragenter & dragover must have e.preventDefault()
+  - use of e.preventDefault() is essential to declare drop zones
+ 
+**Deployment**
+
+I am deploying the project on github pages as it's a pretty simple app. 
+
+https://hritik-agarwal.github.io/001-todo-app/
