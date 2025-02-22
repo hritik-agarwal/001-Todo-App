@@ -14,8 +14,7 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 
 **Tools and Resources Used**
 
-- HTML5, CSS, JS, Drawio ([Original Wireframe 🔗](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=0#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22vmyFimj8aLDsVH5j3-9g%22%3E7Zpdj6M2FIZ%2FTaTdi4n4CIRcTpKZbqWOWmladdWbymAHrBjMgtNk%2ButrY0MAOzOdTgJU2nABHNtgP37tcxwzczfp6YcC5MkThYjMHAueZu525ji2Z9n8JCwv0rIKVtIQFxiqTGfDM%2F4bKaOlrAcMUdnJyCglDOddY0SzDEWsYwNFQY%2FdbDtKum%2FNQYw0w3MEiG79HUOWSGvgLM%2F2LwjHSf1m21ftS0GdWbWkTACkx5bJfZi5m4JSJq%2FS0wYRAa%2FmIss9XkhtKlagjP2bAvgP9lQcwbfdw%2FbOttP0629%2F2nfqKX8BclANVpVlLzWBY4IZes5BJO6PvJdn7jphKeF3Nr8EZS657%2FAJ8Vetd5iQDSW0qIq7O08cwk4z1rLLH7eXrKB71Erxqx9PUXVDBUOni422G5Rcg4imiBUvPIsq4HiyRK0%2B1RfHc1cul8qWtLqxMQIln7h58pkwv1CQ3wHc0YCntECVqiEt5%2FP5h%2FlfgZrtLeddcI7dWFrsPNvT2TXGq7NzDWL1CVPa6lDzvx1onXBXVrPKPc%2FAIZwqRHU6v4rF%2BYnXzgepYJuFZS5TiMzxKJ8uM9bmMgfZu95ohSDaxwU9ZPAukmIX6awAWVn3zLqayJo0IqDeQVDsPxVx%2BIlLknOz6tNneRYpjufJm%2FbF58%2FGlv7KdcYz3Od5q4WyNXULewKs6iykVentDTn2Rj%2F0UAAXplEeOKF7rVFu18NVqdV29XG%2BWJnG%2Ba2G%2BUKTajW0rWcEiijhF7IbPkL6BtwcEzfbwM29FTfv4hDnAsJ71FOxLalyL1qWnJtj%2FXxgbVl3yryC2xoHt8EdLYIhcfsabgVWyfUBYgZCIvzTI0Y8dJoaQtek2EERLi8hdCXCH7OSgco7bRFBDE0P4XJshMElhAuJcFuAOFYyfGPeHAdhM0eOhnClz5s8hBBRRB9VQtPwUL7bkSObu%2FKlyZGv%2FKULbuTITWBdf0Cu9ftbYL%2F%2Bd6ZXIOTbizd9yLCE9CXktAiZXMSwhPQ13wcI9ZfXQYSiyDQuw8BbeNaNmBp8xrBM9bXgtFQ3%2FsylL0E%2B6hJuMMGPLyTDimOCmEafw%2FSVwgQxje8M9dWAWEKNCslbBhObmfR4f3KQxp%2BX9Ij%2BY5D6ccMO%2Bea4AS5XoXWluEHDOvY85ujx%2FOS0N%2Fos5ughvQaohaDZ2BKigaBMmpU4T8lF%2FvQUi93BeUgp43oD%2BTxKULQP6YljWRMQIvILLTHDNOO5C9nEtYCKI0B%2B6qWnGEJRjTUgOBYGgnbt%2FPfK3OTjL4cYdXaftg%2Fi0IdFZd5ye1XBc0N4%2F%2BMs5nfeOe0RC6yilGUF3uPmnPJcjal6oImfeMYesShRD7yCbJot0tfm9SH%2Fg6hV8l02%2FyfZGD3doLIxbet9l83UZWPy5IPKxrC%2B7cumI49LHd%2Fr176K4hSSRkBavJTRDOn9urbE0WSuPxwR8tO26zsddd3Aot9nxsBi0D7TF9tfMBR%2F628FRy0IG3g71At6vAwaN30tcjte%2Bqp7UyDw6ibSQKhWXVR%2BMDYqfeUtN4%2FuIZxNdLvdBG3hXIcavz1%2FWlaltT7Qcx%2F%2BAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E))
-
+- HTML5, CSS, JS, Drawio
 **Daily Progress**
 
 * [X] **Day 1 : 17th Feb** : Done with project setup
@@ -23,6 +22,13 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 * [X] **Day 3 : 19th Feb** : Added CRUD functionality in JS
 * [X] **Day 4 : 20th Feb** : Added localStorage, search feature and hide done todos functionality
 * [X] **Day 5 : 21st Feb** : Added todo reorder feature using draggable api
+
+**Initial Wireframe**
+
+([Wireframe Link 🔗](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&target=blank&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=0#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22vmyFimj8aLDsVH5j3-9g%22%3E7Zpdj6M2FIZ%2FTaTdi4n4CIRcTpKZbqWOWmladdWbymAHrBjMgtNk%2ButrY0MAOzOdTgJU2nABHNtgP37tcxwzczfp6YcC5MkThYjMHAueZu525ji2Z9n8JCwv0rIKVtIQFxiqTGfDM%2F4bKaOlrAcMUdnJyCglDOddY0SzDEWsYwNFQY%2FdbDtKum%2FNQYw0w3MEiG79HUOWSGvgLM%2F2LwjHSf1m21ftS0GdWbWkTACkx5bJfZi5m4JSJq%2FS0wYRAa%2FmIss9XkhtKlagjP2bAvgP9lQcwbfdw%2FbOttP0629%2F2nfqKX8BclANVpVlLzWBY4IZes5BJO6PvJdn7jphKeF3Nr8EZS657%2FAJ8Vetd5iQDSW0qIq7O08cwk4z1rLLH7eXrKB71Erxqx9PUXVDBUOni422G5Rcg4imiBUvPIsq4HiyRK0%2B1RfHc1cul8qWtLqxMQIln7h58pkwv1CQ3wHc0YCntECVqiEt5%2FP5h%2FlfgZrtLeddcI7dWFrsPNvT2TXGq7NzDWL1CVPa6lDzvx1onXBXVrPKPc%2FAIZwqRHU6v4rF%2BYnXzgepYJuFZS5TiMzxKJ8uM9bmMgfZu95ohSDaxwU9ZPAukmIX6awAWVn3zLqayJo0IqDeQVDsPxVx%2BIlLknOz6tNneRYpjufJm%2FbF58%2FGlv7KdcYz3Od5q4WyNXULewKs6iykVentDTn2Rj%2F0UAAXplEeOKF7rVFu18NVqdV29XG%2BWJnG%2Ba2G%2BUKTajW0rWcEiijhF7IbPkL6BtwcEzfbwM29FTfv4hDnAsJ71FOxLalyL1qWnJtj%2FXxgbVl3yryC2xoHt8EdLYIhcfsabgVWyfUBYgZCIvzTI0Y8dJoaQtek2EERLi8hdCXCH7OSgco7bRFBDE0P4XJshMElhAuJcFuAOFYyfGPeHAdhM0eOhnClz5s8hBBRRB9VQtPwUL7bkSObu%2FKlyZGv%2FKULbuTITWBdf0Cu9ftbYL%2F%2Bd6ZXIOTbizd9yLCE9CXktAiZXMSwhPQ13wcI9ZfXQYSiyDQuw8BbeNaNmBp8xrBM9bXgtFQ3%2FsylL0E%2B6hJuMMGPLyTDimOCmEafw%2FSVwgQxje8M9dWAWEKNCslbBhObmfR4f3KQxp%2BX9Ij%2BY5D6ccMO%2Bea4AS5XoXWluEHDOvY85ujx%2FOS0N%2Fos5ughvQaohaDZ2BKigaBMmpU4T8lF%2FvQUi93BeUgp43oD%2BTxKULQP6YljWRMQIvILLTHDNOO5C9nEtYCKI0B%2B6qWnGEJRjTUgOBYGgnbt%2FPfK3OTjL4cYdXaftg%2Fi0IdFZd5ye1XBc0N4%2F%2BMs5nfeOe0RC6yilGUF3uPmnPJcjal6oImfeMYesShRD7yCbJot0tfm9SH%2Fg6hV8l02%2FyfZGD3doLIxbet9l83UZWPy5IPKxrC%2B7cumI49LHd%2Fr176K4hSSRkBavJTRDOn9urbE0WSuPxwR8tO26zsddd3Aot9nxsBi0D7TF9tfMBR%2F628FRy0IG3g71At6vAwaN30tcjte%2Bqp7UyDw6ibSQKhWXVR%2BMDYqfeUtN4%2FuIZxNdLvdBG3hXIcavz1%2FWlaltT7Qcx%2F%2BAQ%3D%3D%3C%2Fdiagram%3E%3C%2Fmxfile%3E))
+
+![image](https://github.com/user-attachments/assets/ee5b5281-c9fc-4e2b-9c3b-c22aaa01b505)
+
 
 **Things I Learned**
 
