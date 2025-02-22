@@ -15,6 +15,7 @@ Basic todo app with vanilla js to learn crud operations, filtering, local storag
 **Tools and Resources Used**
 
 - HTML5, CSS, JS, Drawio
+
 **Daily Progress**
 
 * [X] **Day 1 : 17th Feb** : Done with project setup
@@ -64,3 +65,4 @@ I am deploying the project on github pages as it's a pretty simple app.
 
 https://hritik-agarwal.github.io/001-Todo-App/
 
+<img src="https://github.com/user-attachments/assets/32293d3c-d2e0-42aa-be04-851bfea1c069" width="800px">
